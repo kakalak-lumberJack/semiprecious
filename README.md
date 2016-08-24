@@ -18,10 +18,7 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 
 You should have received a copy of the GNU Lesser General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-License for Textures, Models and Sounds
+License for Textures
 
-CC-BY-SA 3.0 UNPORTED. Created by Kakalak-lumberJack except as noted below:
+CC-BY-SA 3.0 UNPORTED. Created by kakalak-lumberJack
 
-#Credits:
-
-Mito551 (sounds) (CC BY-SA)
