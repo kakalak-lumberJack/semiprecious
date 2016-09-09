@@ -1,5 +1,18 @@
 --register nodes
 
+minetest.register_craftitem("semiprecious:garnet", {
+        description = "Garnet",
+        inventory_image = "semiprecious_garnet.png"
+})
+
+minetest.register_node("semiprecious:stone_with_garnet", {
+        description = "Stone with Garnet",
+        tiles = {"default_stone.png^semiprecious_mineral_garnet.png"},
+        is_ground_content = true,
+        groups = {cracky = 2},
+        drop = "semiprecious:garnet 2",
+        sounds = default.node_sound_stone_defaults(),
+})
 
 local semiprecious_nodes = {
 
@@ -15,7 +28,7 @@ local semiprecious_nodes = {
                 description = "Turquoise Block",
                 tiles = {"semiprecious_turquoise_block.png"},
                 is_ground_content = true,
-                groups = {cracky =3},
+                groups = {cracky = 2},
                 sounds = default.node_sound_stone_defaults(),
         },
 
@@ -23,7 +36,7 @@ local semiprecious_nodes = {
                 description = "Lapis Lazuli Block",
                 tiles = {"semiprecious_lapis_lazuli_block.png"},
                 is_ground_content = true,
-                groups = {cracky = 3},
+                groups = {cracky = 2},
                 sounds = default.node_sound_stone_defaults(),
         },
 
@@ -39,7 +52,7 @@ local semiprecious_nodes = {
                 description = "Malachite Block",
                 tiles = {"semiprecious_malachite_block.png"},
                 is_ground_content = true,
-                groups = {cracky = 3},
+                groups = {cracky = 2},
                 sounds = default.node_sound_stone_defaults(),
         },
 
@@ -50,6 +63,27 @@ local semiprecious_nodes = {
                 groups = {cracky = 3},
                 sounds = default.node_sound_stone_defaults(),
         },
+
+        ["garnet_block"] = {
+                description = "Garnet Block",
+                tiles = {"semiprecious_garnet_block.png"},
+                paramtype = "light",
+                use_texture_alpha = true,
+                is_ground_content = true,
+                sunlight_propagates = true,
+                groups = {cracky = 2},
+                sounds = default.node_sound_stone_defaults(),
+        },
+
+        ["garnet_tile"] = {
+                description = "Garnet Tile",
+                tiles = {"semiprecious_garnet_tile.png"},
+                paramtype = "light",
+                use_texture_alpha = true,
+                is_ground_content = false,
+                groups = {cracky = 3},
+                sounds = default.node_sound_stone_defaults(),
+        }
 }
 
 for name, definition in pairs(semiprecious_nodes) do
@@ -75,6 +109,7 @@ if minetest.get_modpath("moreblocks") ~= nil then
                 stairsplus:register_all("stairs", name, "semiprecious:"..name, {
                         description = name,
                               tiles = {"semiprecious_"..name..".png"},
+                              use_texture_alpha = true,
                               groups = {cracky = 3},
                               sounds = default.node_sound_stone_defaults()
         })
