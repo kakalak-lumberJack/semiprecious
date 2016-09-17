@@ -114,7 +114,7 @@ if minetest.get_modpath("moreblocks") ~= nil then
                               sounds = default.node_sound_stone_defaults()
         })
         end
-else
+elseif
         for name, definition in pairs(semiprecious_nodes) do
 
               stairs.register_stair_and_slab(
