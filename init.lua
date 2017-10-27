@@ -80,7 +80,8 @@ local semiprecious_nodes = {
 
         ["garnet_block"] = {
                 description = "Garnet Block",
-                tiles = {"semiprecious_garnet_block.png"},
+                drawtype = "allfaces",
+		tiles = {"semiprecious_garnet_block.png"},
                 paramtype = "light",
                 use_texture_alpha = true,
                 is_ground_content = true,
@@ -101,6 +102,7 @@ local semiprecious_nodes = {
 
         ["amethyst_block"] = {
                 description = "Amethyst Block",
+		drawtype = "allfaces",
                 tiles = {"semiprecious_amethyst_block.png"},
                 paramtype = "light",
                 use_texture_alpha = true,
