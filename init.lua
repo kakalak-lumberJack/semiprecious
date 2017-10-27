@@ -133,7 +133,7 @@ minetest.register_node("semiprecious:turquoise_tile", {
         groups = {cracky =3},
         sounds = default.node_sound_stone_defaults(),
 })
-
+dofile(minetest.get_modpath("semiprecious").."/lighting.lua")
 dofile(minetest.get_modpath("semiprecious").."/mapgen.lua")
 dofile(minetest.get_modpath("semiprecious").."/crafting.lua")
 
